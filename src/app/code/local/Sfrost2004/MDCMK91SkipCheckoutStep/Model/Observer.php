@@ -18,6 +18,8 @@
 class Sfrost2004_MDCMK91SkipCheckoutStep_Model_Observer extends Varien_Event_Observer
 {
 	/**
+	 * Set templates to add our custom JavaScript
+	 *
 	 * @param Varien_Event_Observer $observer
 	 */
 	public function setTemplate(Varien_Event_Observer $observer)
@@ -38,17 +40,19 @@ class Sfrost2004_MDCMK91SkipCheckoutStep_Model_Observer extends Varien_Event_Obs
 	}
 
 	/**
+	 * Set template for shipping method progress step (to remove link to step)
+	 *
 	 * @param Varien_Event_Observer $observer
 	 */
-//	public function setProgressTemplate(Varien_Event_Observer $observer)
-//	{
-//		/** @var Mage_Core_Model_Layout $layout */
-//		$block = $observer->getEvent()->getBlock();
-//
-//		/** @var Mage_Core_Block_Template $block */
-//		if($block instanceof Mage_Checkout_Block_Onepage_Progress
-//		   && $block->getNameInLayout() == "shippingmethod.progress") {
-//			$block->setTemplate("sfrost2004/checkout/onepage/progress/shipping_method.phtml");
-//		}
-//	}
+	public function setProgressTemplate(Varien_Event_Observer $observer)
+	{
+		/** @var Mage_Core_Model_Layout $layout */
+		$block = $observer->getEvent()->getBlock();
+
+		/** @var Mage_Core_Block_Template $block */
+		if($block instanceof Mage_Checkout_Block_Onepage_Progress
+			&& current($block->getLayout()->getUpdate()->getHandles()) == "checkout_onepage_progress_shipping_method") {
+			$block->setTemplate("sfrost2004/checkout/onepage/progress/shipping_method.phtml");
+		}
+	}
 }

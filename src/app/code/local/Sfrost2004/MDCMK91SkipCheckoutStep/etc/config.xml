@@ -1,4 +1,21 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Sfrost2004
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future. If you wish to customize this module for your
+ * needs please contact Sfrost2004 for more information.
+ *
+ * @category    Sfrost2004
+ * @package     mdcmk91-skip-checkout-step.local
+ * @copyright   Copyright (c) 2016 Sfrost2004
+ * @author      Sfrost2004
+ *
+ */
+-->
 <config>
     <modules>
         <Sfrost2004_MDCMK91SkipCheckoutStep>
@@ -37,7 +54,7 @@
                     </sfrost2004_mdcmk91skipcheckoutstep>
                 </observers>
             </controller_action_layout_generate_blocks_after>
-            <!--<core_block_abstract_to_html_before>
+            <core_block_abstract_to_html_before>
                 <observers>
                     <sfrost2004_mdcmk91skipcheckoutstep>
                         <class>sfrost2004_mdcmk91skipcheckoutstep/observer</class>
@@ -45,7 +62,7 @@
                         <method>setProgressTemplate</method>
                     </sfrost2004_mdcmk91skipcheckoutstep>
                 </observers>
-            </core_block_abstract_to_html_before>-->
+            </core_block_abstract_to_html_before>
         </events>
     </frontend>
 </config>
