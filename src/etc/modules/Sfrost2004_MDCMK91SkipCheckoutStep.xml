@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sfrost2004_MDCMK91SkipCheckoutStep>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Checkout/>
+            </depends>
+        </Sfrost2004_MDCMK91SkipCheckoutStep>
+    </modules>
+</config>

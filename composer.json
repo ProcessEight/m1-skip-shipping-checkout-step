@@ -1,0 +1,12 @@
+{
+  "name": "sfrost2004/mdcmk91-skip-checkout-step",
+  "description": "MDC MK Exercise 9.1: Modify the Onepage-Checkout to skip the shipping step, if only one shipping option is available.",
+  "extra": {
+    "magento-root-dir": "www"
+  },
+  "require": {
+    "magento-hackathon/magento-composer-installer": "~3.0",
+    "aydin-hassan/magento-core-composer-installer": "~1.2",
+    "firegento/magento": "~1.9.3.1"
+  }
+}

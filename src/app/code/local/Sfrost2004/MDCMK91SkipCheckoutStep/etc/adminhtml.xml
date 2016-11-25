@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <sfrost2004 translate="title" module="sfrost2004_mdcmk91skipcheckoutstep">
+                                        <title>Sfrost2004 Section</title>
+                                    </sfrost2004>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+<!--
+One page checkout main layout
+-->
+
+    <checkout_onepage_index translate="label">
+        <label>Sfrost2004 mdcmk91skipcheckoutstep One Page Checkout</label>
+
+        <!--
+        Overridden to add custom opcheckout.js file (to trigger reload of shipping method in progress block)
+        -->
+        <reference name="checkout.onepage">
+            <action method="setTemplate">
+                <template>sfrost2004/checkout/onepage.phtml</template>
+            </action>
+        </reference>
+
+        <!--
+        Overridden to prevent back button on payment step from linking back to hidden shipping method step
+        -->
+        <reference name="checkout.onepage.payment">
+            <action method="setTemplate">
+                <template>sfrost2004/checkout/onepage/payment.phtml</template>
+            </action>
+        </reference>
+    </checkout_onepage_index>
+
+</layout>
