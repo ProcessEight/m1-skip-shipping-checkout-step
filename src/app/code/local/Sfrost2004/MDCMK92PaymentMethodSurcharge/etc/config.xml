@@ -19,7 +19,7 @@
 <config>
     <modules>
         <Sfrost2004_MDCMK92PaymentMethodSurcharge>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </Sfrost2004_MDCMK92PaymentMethodSurcharge>
     </modules>
     <global>

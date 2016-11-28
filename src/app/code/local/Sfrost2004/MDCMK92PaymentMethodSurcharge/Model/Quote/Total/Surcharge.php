@@ -39,6 +39,9 @@ class Sfrost2004_MDCMK92PaymentMethodSurcharge_Model_Quote_Total_Surcharge exten
 	    $this->_setAmount($amountPrice);
 	    $this->_setBaseAmount($baseSurcharge);
 
+	    $address->setSurcharge($amountPrice);
+	    $address->setBaseSurcharge($baseSurcharge);
+
         return $this;
     }
 
