@@ -25,14 +25,9 @@
                         <children>
                             <config>
                                 <children>
-                                    <sfrost2004 translate="title" module="sfrost2004_mdcmk92paymentmethodsurcharge">
+                                    <mdcmk92paymentmethodsurcharge translate="title" module="sfrost2004_mdcmk92paymentmethodsurcharge">
                                         <title>Sfrost2004 Section</title>
-                                        <children>
-                                            <sfrost2004_mdcmk92paymentmethodsurcharge>
-                                                <title>MDC MK 9.2 Payment Method Surcharge</title>
-                                            </sfrost2004_mdcmk92paymentmethodsurcharge>
-                                        </children>
-                                    </sfrost2004>
+                                    </mdcmk92paymentmethodsurcharge>
                                 </children>
                             </config>
                         </children>

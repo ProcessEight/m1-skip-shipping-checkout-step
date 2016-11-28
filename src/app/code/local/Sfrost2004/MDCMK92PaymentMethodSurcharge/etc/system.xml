@@ -24,7 +24,7 @@
         </sfrost2004>
     </tabs>
     <sections>
-        <sfrost2004 translate="label" module="sfrost2004_mdcmk92paymentmethodsurcharge">
+        <mdcmk92paymentmethodsurcharge translate="label" module="sfrost2004_mdcmk92paymentmethodsurcharge">
             <label>MDCMK 9.2: Payment Method Surcharge</label>
             <tab>sfrost2004</tab>
             <sort_order>1</sort_order>
@@ -52,7 +52,7 @@
                     </fields>
                 </general>
             </groups>
-        </sfrost2004>
+        </mdcmk92paymentmethodsurcharge>
         <payment>
             <groups>
                 <ccsave>

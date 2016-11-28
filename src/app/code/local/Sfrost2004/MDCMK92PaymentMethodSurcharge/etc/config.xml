@@ -52,15 +52,15 @@
     </global>
     <frontend>
         <events>
-            <core_block_abstract_to_html_before>
+            <payment_form_block_to_html_before>
                 <observers>
                     <sfrost2004_mdcmk92paymentmethodsurcharge>
+                        <type>model</type>
                         <class>sfrost2004_mdcmk92paymentmethodsurcharge/observer</class>
-                        <type>singleton</type>
                         <method>addSurchargeToPaymentMethodName</method>
                     </sfrost2004_mdcmk92paymentmethodsurcharge>
                 </observers>
-            </core_block_abstract_to_html_before>
+            </payment_form_block_to_html_before>
         </events>
     </frontend>
 </config>
