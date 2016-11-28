@@ -49,6 +49,17 @@
                 </setup>
             </sfrost2004_mdcmk92paymentmethodsurcharge_setup>
         </resources>
+        <sales>
+            <quote>
+                <totals>
+                    <surcharge>
+                        <class>sfrost2004_mdcmk92paymentmethodsurcharge/quote_total_surcharge</class>
+                        <after>subtotal</after>
+                        <before>grand_total</before>
+                    </surcharge>
+                </totals>
+            </quote>
+        </sales>
     </global>
     <frontend>
         <events>
