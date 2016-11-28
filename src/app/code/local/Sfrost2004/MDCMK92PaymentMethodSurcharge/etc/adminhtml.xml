@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sfrost2004
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future. If you wish to customize this module for your
+ * needs please contact Sfrost2004 for more information.
+ *
+ * @category    Sfrost2004
+ * @package     mdcmk91-skip-checkout-step.local
+ * @copyright   Copyright (c) 2016 Sfrost2004
+ * @author      Sfrost2004
+ *
+ */
+ -->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <sfrost2004 translate="title" module="sfrost2004_mdcmk92paymentmethodsurcharge">
+                                        <title>Sfrost2004 Section</title>
+                                        <children>
+                                            <sfrost2004_mdcmk92paymentmethodsurcharge>
+                                                <title>MDC MK 9.2 Payment Method Surcharge</title>
+                                            </sfrost2004_mdcmk92paymentmethodsurcharge>
+                                        </children>
+                                    </sfrost2004>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

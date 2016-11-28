@@ -19,7 +19,7 @@
 <config>
     <modules>
         <Sfrost2004_MDCMK91SkipCheckoutStep>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
             <depends>
                 <Mage_Checkout/>

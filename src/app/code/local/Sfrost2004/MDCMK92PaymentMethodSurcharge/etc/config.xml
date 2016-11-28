@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sfrost2004
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future. If you wish to customize this module for your
+ * needs please Sfrost2004 for more information.
+ *
+ * @category    Sfrost2004
+ * @package     Default (Template) Project
+ * @copyright   Copyright (c) 2016 Sfrost2004
+ * @author      Sfrost2004
+ *
+ */
+-->
+<config>
+    <modules>
+        <Sfrost2004_MDCMK92PaymentMethodSurcharge>
+            <version>0.1.0</version>
+        </Sfrost2004_MDCMK92PaymentMethodSurcharge>
+    </modules>
+    <global>
+        <models>
+            <sfrost2004_mdcmk92paymentmethodsurcharge>
+                <class>Sfrost2004_MDCMK92PaymentMethodSurcharge_Model</class>
+                <resourceModel>sfrost2004_mdcmk92paymentmethodsurcharge_resource</resourceModel>
+            </sfrost2004_mdcmk92paymentmethodsurcharge>
+            <sfrost2004_mdcmk92paymentmethodsurcharge_resource>
+                <class>Sfrost2004_MDCMK92PaymentMethodSurcharge_Model_Resource</class>
+            </sfrost2004_mdcmk92paymentmethodsurcharge_resource>
+        </models>
+        <blocks>
+            <sfrost2004_mdcmk92paymentmethodsurcharge>
+                <class>Sfrost2004_MDCMK92PaymentMethodSurcharge_Block</class>
+            </sfrost2004_mdcmk92paymentmethodsurcharge>
+        </blocks>
+        <helpers>
+            <sfrost2004_mdcmk92paymentmethodsurcharge>
+                <class>Sfrost2004_MDCMK92PaymentMethodSurcharge_Helper</class>
+            </sfrost2004_mdcmk92paymentmethodsurcharge>
+        </helpers>
+        <resources>
+            <sfrost2004_mdcmk92paymentmethodsurcharge_setup>
+                <setup>
+                    <module>Sfrost2004_MDCMK92PaymentMethodSurcharge</module>
+                </setup>
+            </sfrost2004_mdcmk92paymentmethodsurcharge_setup>
+        </resources>
+    </global>
+    <frontend>
+        <events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <sfrost2004_mdcmk92paymentmethodsurcharge>
+                        <class>sfrost2004_mdcmk92paymentmethodsurcharge/observer</class>
+                        <type>singleton</type>
+                        <method>addSurchargeToPaymentMethodName</method>
+                    </sfrost2004_mdcmk92paymentmethodsurcharge>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>
+    </frontend>
+</config>
