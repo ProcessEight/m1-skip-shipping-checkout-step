@@ -21,28 +21,40 @@ class Sfrost2004_MDCMK92PaymentMethodSurcharge_Model_Quote_Total_Surcharge exten
 	        return $this;
 	    }
 
-	    $paymentMethod = $address->getPaymentMethod();
-	    if($paymentMethod != "ccsave") {
-	        return $this;
-	    }
-
         parent::collect($address);
 
+	    $this->_setAmount(0);
+	    $this->_setBaseAmount(0);
+
 	    $surchargeRate  = $helper->getSurcharge();
+	    $subtotal       = $address->getSubtotal();
 	    $baseSubtotal   = $address->getBaseSubtotal();
-	    $baseSurcharge  = 0;
 
-	    $baseSurcharge = ($baseSubtotal / 100) * $surchargeRate;
+	    if($surchargeRate) {
+		    $surcharge      = ($subtotal / 100) * $surchargeRate;
+		    $baseSurcharge  = ($baseSubtotal / 100) * $surchargeRate;
 
-	    $amountPrice = $address->getQuote()->getStore()->convertPrice($baseSurcharge, false);
-
-	    $this->_setAmount($amountPrice);
-	    $this->_setBaseAmount($baseSurcharge);
-
-	    $address->setSurcharge($amountPrice);
-	    $address->setBaseSurcharge($baseSurcharge);
+		    $this->_setAmount($surcharge);
+		    $this->_setBaseAmount($baseSurcharge);
+	    }
 
         return $this;
+
+//	    parent::collect($address);
+//
+//	    $this->_setAmount(0)->_setBaseAmount(0);
+//
+//	    $payment = $this->_getQuotePaymentMethodCode($address->getQuote());
+//	    if ($payment) {
+//		    $store = $address->getQuote()->getStore();
+//		    $surcharge = $this->_helper()->getSurchargeAmount($payment, $address->getSubtotal(), $store);
+//		    $baseSurcharge = $this->_helper()->getBaseSurchargeAmount($payment, $address->getBaseSubtotal(), $store);
+//		    if ($surcharge) {
+//			    $this->_setAmount($surcharge)->_setBaseAmount($baseSurcharge);
+//		    }
+//	    }
+//
+//	    return $this;
     }
 
     /**

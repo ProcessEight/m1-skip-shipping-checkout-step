@@ -19,7 +19,7 @@
 <config>
     <modules>
         <Sfrost2004_MDCMK92PaymentMethodSurcharge>
-            <version>0.1.1</version>
+            <version>0.1.3</version>
         </Sfrost2004_MDCMK92PaymentMethodSurcharge>
     </modules>
     <global>
@@ -46,6 +46,7 @@
             <sfrost2004_mdcmk92paymentmethodsurcharge_setup>
                 <setup>
                     <module>Sfrost2004_MDCMK92PaymentMethodSurcharge</module>
+                    <class>Mage_Sales_Model_Resource_Setup</class>
                 </setup>
             </sfrost2004_mdcmk92paymentmethodsurcharge_setup>
         </resources>
@@ -54,14 +55,60 @@
                 <totals>
                     <surcharge>
                         <class>sfrost2004_mdcmk92paymentmethodsurcharge/quote_total_surcharge</class>
-                        <after>subtotal</after>
-                        <before>grand_total</before>
+                        <after>subtotal,discount</after>
+                        <before>shipping</before>
                     </surcharge>
                 </totals>
             </quote>
+            <order_invoice>
+                <totals>
+                    <surcharge>
+                        <class>sfrost2004_mdcmk92paymentmethodsurcharge/order_invoice_total_surcharge</class>
+                        <after>subtotal,discount</after>
+                        <before>shipping</before>
+                    </surcharge>
+                </totals>
+            </order_invoice>
+            <order_creditmemo>
+                <totals>
+                    <surcharge>
+                        <class>sfrost2004_mdcmk92paymentmethodsurcharge/order_creditmemo_total_surcharge</class>
+                        <after>subtotal,discount</after>
+                        <before>shipping</before>
+                    </surcharge>
+                </totals>
+            </order_creditmemo>
         </sales>
+        <pdf>
+            <totals>
+                <surcharge translate="title" module="sfrost2004_mdcmk92paymentmethodsurcharge">
+                    <title>Surcharge</title>
+                    <source_field>surcharge</source_field>
+                    <font_size>7</font_size>
+                    <display_zero>0</display_zero>
+                    <sort_order>450</sort_order>
+                </surcharge>
+            </totals>
+        </pdf>
+        <fieldsets>
+            <sales_convert_quote_address>
+                <surcharge>
+                    <to_order>*</to_order>
+                </surcharge>
+                <base_surcharge>
+                    <to_order>*</to_order>
+                </base_surcharge>
+            </sales_convert_quote_address>
+        </fieldsets>
     </global>
     <frontend>
+        <layout>
+            <updates>
+                <mcd_meeting09>
+                    <file>sfrost2004/mdcmk92paymentmethodsurcharge.xml</file>
+                </mcd_meeting09>
+            </updates>
+        </layout>
         <events>
             <payment_form_block_to_html_before>
                 <observers>
@@ -74,4 +121,13 @@
             </payment_form_block_to_html_before>
         </events>
     </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <sfrost2004_mdcmk92paymentmethodsurcharge>
+                    <file>sfrost2004/mdcmk92paymentmethodsurcharge.xml</file>
+                </sfrost2004_mdcmk92paymentmethodsurcharge>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>

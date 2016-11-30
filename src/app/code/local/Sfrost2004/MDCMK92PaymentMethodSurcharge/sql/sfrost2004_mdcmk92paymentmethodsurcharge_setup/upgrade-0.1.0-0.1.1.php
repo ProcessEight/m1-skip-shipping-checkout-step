@@ -19,11 +19,11 @@ $installer = $this;
 
 $installer->startSetup();
 
-$installer->getConnection()->addColumn($installer->getTable('sales/quote_address'), 'surcharge', 'decimal(12,4) default NULL AFTER `base_subtotal_with_discount`');
-$installer->getConnection()->addColumn($installer->getTable('sales/quote_address'), 'surcharge_refunded', 'decimal(12,4) default NULL AFTER `surcharge`');
-$installer->getConnection()->addColumn($installer->getTable('sales/quote_address'), 'surcharge_invoiced', 'decimal(12,4) default NULL AFTER `surcharge_refunded`');
-$installer->getConnection()->addColumn($installer->getTable('sales/quote_address'), 'base_surcharge', 'decimal(12,4) default NULL AFTER `surcharge_invoiced`');
-$installer->getConnection()->addColumn($installer->getTable('sales/quote_address'), 'base_surcharge_refunded', 'decimal(12,4) default NULL AFTER `base_surcharge`');
-$installer->getConnection()->addColumn($installer->getTable('sales/quote_address'), 'base_surcharge_invoiced', 'decimal(12,4) default NULL AFTER `base_surcharge_refunded`');
+$installer->getConnection()->addColumn($installer->getTable('sales/quote'), 'surcharge', 'decimal(12,4) default NULL AFTER `base_subtotal_with_discount`');
+$installer->getConnection()->addColumn($installer->getTable('sales/quote'), 'surcharge_refunded', 'decimal(12,4) default NULL AFTER `surcharge`');
+$installer->getConnection()->addColumn($installer->getTable('sales/quote'), 'surcharge_invoiced', 'decimal(12,4) default NULL AFTER `surcharge_refunded`');
+$installer->getConnection()->addColumn($installer->getTable('sales/quote'), 'base_surcharge', 'decimal(12,4) default NULL AFTER `surcharge_invoiced`');
+$installer->getConnection()->addColumn($installer->getTable('sales/quote'), 'base_surcharge_refunded', 'decimal(12,4) default NULL AFTER `base_surcharge`');
+$installer->getConnection()->addColumn($installer->getTable('sales/quote'), 'base_surcharge_invoiced', 'decimal(12,4) default NULL AFTER `base_surcharge_refunded`');
 
 $installer->endSetup();

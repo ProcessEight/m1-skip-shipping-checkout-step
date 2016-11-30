@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+(c) Copyright 2012 X.commerce, Inc.
+
+All rights reserved. No part of this code shall be reproduced,
+stored in a retrieval system, or transmitted by any means,
+electronic, mechanical, photocopying, recording, or otherwise,
+without written permission from X.commerce, Inc.  04-15-2012
+
+Please be aware that this code is not production ready.
+It is distributed to serve as an educational example, but in
+some cases error checking or something similar might have been
+neglected.
+-->
+<layout version="0.1.0">
+
+    <adminhtml_sales_order_view>
+        <reference name="order_totals">
+            <block type="sfrost2004_mdcmk92paymentmethodsurcharge/sales_total_payment_surcharge" name="total_payment_surcharge" as="payment_surcharge"/>
+        </reference>
+    </adminhtml_sales_order_view>
+
+    <adminhtml_sales_order_invoice_new>
+        <reference name="invoice_totals">
+            <block type="sfrost2004_mdcmk92paymentmethodsurcharge/sales_total_payment_surcharge" name="total_payment_surcharge" as="payment_surcharge"/>
+        </reference>
+    </adminhtml_sales_order_invoice_new>
+
+    <adminhtml_sales_order_invoice_updateqty>
+        <reference name="invoice_totals">
+            <block type="sfrost2004_mdcmk92paymentmethodsurcharge/sales_total_payment_surcharge" name="total_payment_surcharge" as="payment_surcharge"/>
+        </reference>
+    </adminhtml_sales_order_invoice_updateqty>
+
+    <adminhtml_sales_order_invoice_view>
+        <reference name="invoice_totals">
+            <block type="sfrost2004_mdcmk92paymentmethodsurcharge/sales_total_payment_surcharge" name="total_payment_surcharge" as="payment_surcharge"/>
+        </reference>
+    </adminhtml_sales_order_invoice_view>
+
+    <adminhtml_sales_order_creditmemo_new>
+        <reference name="creditmemo_totals">
+            <block type="sfrost2004_mdcmk92paymentmethodsurcharge/sales_total_payment_surcharge" name="total_payment_surcharge" as="payment_surcharge"/>
+        </reference>
+    </adminhtml_sales_order_creditmemo_new>
+
+    <adminhtml_sales_order_creditmemo_view>
+        <reference name="creditmemo_totals">
+            <block type="sfrost2004_mdcmk92paymentmethodsurcharge/sales_total_payment_surcharge" name="total_payment_surcharge" as="payment_surcharge"/>
+        </reference>
+    </adminhtml_sales_order_creditmemo_view>
+
+</layout>
