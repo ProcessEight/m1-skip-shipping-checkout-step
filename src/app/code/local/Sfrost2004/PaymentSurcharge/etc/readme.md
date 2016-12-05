@@ -380,7 +380,7 @@ Compatibility
 
 Installation Instructions
 -------------------------
-1. Install the extension via Magento Connect with the key shown above or copy all the files into your document root.
+1. Install the extension by copying all the files into your document root.
 2. Clear the cache, logout from the admin panel and then login again.
 3. Configure and activate the extension under System - Configuration - Company - Example Extension.
 
@@ -399,8 +399,7 @@ Any contribution is highly appreciated. The best way to contribute code is to op
 Developer
 ---------
 
-[http://www.firstname-lastname.com](http://www.firstname-lastname.com)
-[@FirstNameLastName](https://twitter.com/FirstNameLastName)
+[http://www.frostnet.co.uk](http://www.frostnet.co.uk)
 
 Licence
 -------
